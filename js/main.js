@@ -7,4 +7,9 @@ $(function() {
     e.preventDefault();
     $('.section-open').parents('.section-bg').addClass('open');
   });
+  $('.btn-toggle').on('click', function(e){
+    e.preventDefault();
+    $('.btn-toggle').parents('#header').toggleClass('open');
+  });
+  
 });
