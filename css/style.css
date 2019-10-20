@@ -121,10 +121,6 @@ img {
     padding: 0 15px;
 }
 
-
-.logo {
-    padding-left: 30px;
-}
 .header-nav {
 margin: 0 -15px;
 }
@@ -203,12 +199,12 @@ h1{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.icon {
+.icon-sirvice {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.icon span {
+.icon-sirvice span {
     font-size: 14px;
     letter-spacing: 6px;
     color: #111111;
@@ -324,12 +320,12 @@ h1{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.icon {
+.icon-sirvice {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.icon span {
+.icon-sirvice span {
     font-size: 14px;
     letter-spacing: 6px;
     color: #111111;
@@ -393,10 +389,12 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     transform: translateY(-100%);
     transition: transform .3s;
-   
+    width: 370px;
+    height: 445px;
+
+
 }
 .card-overlay-title {
     font-size: 20px;
@@ -745,9 +743,26 @@ h2 {
     margin-left: -25px;
     z-index: 1;
 }
+.prev-arrow span{
+    z-index: 2;
+    position: absolute;
+    left: 10px;
+    top: 52.7%;
+    font-size: 18px;
+    color: #222222;
+    text-align: center;
+}
+.next-arrow span {
+    position: absolute;
+    right: 10px;
+    top: 52.7%;
+    font-size: 18px;
+    color: #222222;
+    text-align: center;
+    z-index: 3;
+}
 .author {
     margin: 0;
-    position: relative;
     font-size: 18px;
     line-height: 30px;
     color: #ffffff;
@@ -755,24 +770,27 @@ h2 {
     font-weight: 300;
     text-align: center;
     }
+.single-item .slick-next{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    margin-right: -25px;
+    z-index: 0;
+}
 .qoute {
     padding: 25px 0 50px 0;
     color: #fff;
 } 
-.qoute-title:after {
+.qoute-title::after {
     content: "\201D";
-    top: 30px;
+    font-family: "icomoon";
+    
 }
-.qoute-deskription {
-    text-align: center;
-    max-width: 730px;
-    padding-bottom: 145px;
-    padding-top: 194px;
-   
-}         
-.slick-slide {
-    width: 100vw;
-} 
+
 .qoute-title:after {
     position: absolute;
     width: 30px;
@@ -784,9 +802,25 @@ h2 {
     color: #ffffff;
     font-family: "et";
     text-align: center;
-    top: 140px;
-    bottom: 25px;
+   
 }
+
+.qoute-deskription {
+    text-align: center;
+    max-width: 735px;
+    padding-bottom: 145px;
+    padding-top: 194px;
+   
+}  
+.qoute-title {
+    font-size: 32px;
+    line-height: 32px;
+    color: #ffffff;
+    font-family: "et";
+    text-align: center;
+    padding-right: 26px;
+}       
+
 h3 {
     padding-top: 25px;
     font-size: 11px;
@@ -835,17 +869,7 @@ h3 {
     line-height: 38px;
     font-weight: 400;
 }
-.single-item .slick-next{
-    position: absolute;
-    right: 0;
-    top: 50%;
-    font-size: 0;
-    width: 50px;
-    height: 50px;
-    transform: rotate(45deg);
-    margin-right: -25px;
-    z-index: 0;
-}
+
 
 /* end slick */
 
@@ -946,16 +970,27 @@ h3 {
 
 .newsletter-content {
     text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 26px;
+    color: #777777;
+    font-family: "Open Sans";
+    font-weight: 400;
+}
+.plase {
+    text-align: center;
+    padding-top: 20px;
 }
 .newsletter-title {
-    color: #111;
     font-family: "Dosis", sans-serif;
     font-size: 16px;
+    letter-spacing: 5px;
     line-height: 26px;
+    color: #111111;
+    font-weight: 300;
+    text-align: center;
     text-transform: uppercase;
-    font-weight: 200;
-    letter-spacing: 3px;
-    margin-bottom: 23px;
+    padding-bottom: 40px;
 }
 .newsletter-content input {
     padding: 14px;
@@ -1004,6 +1039,12 @@ h3 {
 }
 .contact-info {
     margin-bottom: 75px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #777777;
+    font-family: "Dosis";
+    font-weight: 400;
+    flex-wrap: wrap;
 }
 .contact-info-item {
     width: 33.333%;
@@ -1079,7 +1120,7 @@ h3 {
     height: 100%;
 }
 input, textarea {
-    border: 1px colid #000;
+    border: 1px solid #dedede;
     padding: 0 13px;
     display: inline-block;
     border-radius: 2px;
@@ -1167,7 +1208,7 @@ textarea::placeholder {
     display: inline-block;
     font-size: 14px;
     font-family: "Font Awesome";
-    padding: 10px;
+    padding: 4px 0 4px 0;
 }
 .icon-facebook:before {
     content: "\ea90";
@@ -1177,7 +1218,7 @@ textarea::placeholder {
     display: inline-block;
     font-size: 14px;
     font-family: "Font Awesome";
-    padding: 11px 9px 10px 7px; 
+    padding: 4px 0 4px 0;
 }
   .icon-twitter:before {
     content: "\ea96";
@@ -1186,18 +1227,20 @@ textarea::placeholder {
     transform: rotate(-45deg);
     display: inline-block;
     font-size: 14px;
+   
     font-family: "Font Awesome";
-    padding: 10px; 
+    padding: 4px 0 4px 0;
   }
   .icon-behance2:before {
     content: "\eaa9";
   }
+  
   .icon-linkedin {
     transform: rotate(-45deg);
     display: inline-block;
     font-size: 14px;
     font-family: "Font Awesome";
-    padding: 10px;
+    padding: 4px 0 4px 0;
   }
   .icon-linkedin:before {
     content: "\eac9";
@@ -1207,7 +1250,7 @@ textarea::placeholder {
     display: inline-block;
     font-size: 14px;
     font-family: "Font Awesome";
-    padding: 10px;
+    padding: 4px 0 4px 0;
   }
   .icon-pinterest:before {
     content: "\ead1";
@@ -1311,8 +1354,227 @@ footer .link-up a {
    display: none;
     
 }
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.ttf');
+    src:  url('../fonts/icomoon.woff') format('embedded-opentype'),
+      url('../fonts/icomoon.eot') format('truetype'),
+      url('../fonts/icomoon.woff?rq16xt') format('woff'),
+      url('../fonts/icomoon.svg?rq16xt#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  .icon {
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  
+  }
+  .icon li  {
+    display: inline-block;
+    text-align: center;
+  }
+
+
+
+
+  @media screen and (max-width: 480px)  {
+    .col-md-12 {
+        width: 100%;
+    }
+    .arrow-img {
+        position: absolute;
+        bottom: 15px;
+        left: 45%;
+        line-height: 1px;
+    }
+    .btn-toggle {
+        line-height: 10px;
+        color: #fff;
+        background-color: #000;
+        font-size: 30px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        display: none;
+    }
+    .contents h1 {
+        letter-spacing: 10px;
+        font-size: 10px;
+    }
+    .contents span {
+        font-size: 5px;
+        padding-top: 25px;
+    }
+    .news {
+        padding: 35px 0;
+    }
+    .news-content-btn {
+        padding: 5px 13px 5px 5px;
+        font-size: 6px;
+        letter-spacing: 1px;
+        line-height: 13px;
+    }
+    .news-content-btn:after {
+        top: 5px;
+        right: 5px;
+    }
+    .news img {
+        width: 50%;
+        max-width: 130px;
+        margin-bottom: 10px;
+    }
+    .news-content-title {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    .news-content-title span {
+        font-size: 7px;
+        letter-spacing: 2px;
+        margin-bottom: 13px;
+        margin-top: 8px;
+    }
+    .new-content-text {
+        font-size: 7px;
+        line-height: 13px;
+        margin-bottom: 13px;
+    }
+    .news-title {
+        font-size: 9px;
+        margin-bottom: 40px;
+        letter-spacing: 6px;
+    }
+    .new-title-left {
+        font-size: 6px;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }
+    .newsletter {
+        padding: 40px 0;
+    }
+    .newsletter-title {
+        font-size: 8px;
+        letter-spacing: 3px;
+        line-height: 13px;
+        padding-bottom: 20px;
+    }
+    .newsletter-content .btn.btn-primary {
+        padding: 5px 10px;
+        border-radius: 1px;
+        margin-top: 10px;
+        transition: .5s;
+    }
+    .from-group .form-control{
+        margin-bottom: 10px;
+    }
+    .form-action {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        flex-direction: column;
+    }
+    .btn {
+        padding: 5px 10px;
+        border-radius: 1px;
+        margin-top: 10px;
+    }
+    .btn.btn-primary {
+        line-height: 17px;
+        font-size: 7px;
+    }
+    .contact {
+        padding: 70px 0 80px 0;
+    }
+    .contact-title {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 40px;
+    }
+    .contact-info {
+        margin-bottom: 35px;
+        font-size: 10px;
+        letter-spacing: 2px;
+        flex-wrap: wrap;
+        flex-direction: column;
+       
+    }
+    .section-title h2 {
+        font-size: 10px;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+    
+    #tabs2 ul {
+        max-width: 300px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    #tabs2 li {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+    ul {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .section-title {
+        margin-bottom: 20px; 
+    }
+    .baner-content {
+        padding: 35px 0;
+    }
+    .baner-title {
+        margin-bottom: 13px;
+        font-size: 9px;
+        letter-spacing: 3px;
+        line-height: 13px;
+    }
+    .baner-text {
+        margin-bottom: 20px;
+        font-size: 8px;
+        line-height: 13px;
+    }
+    .baner-btn a {
+        padding: 8px 20px;
+        line-height: 13px;
+        border-radius: 4px;
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+    .baner img {
+        margin-top: -17px;
+        max-width: 300px;
+    }
+    .benefits {
+        padding-top: 65px;
+        padding-bottom: 85px;
+    }
+    .block {
+        padding-top: 40px;
+    }
+    .benefits-block-text {
+        font-size: 5px;
+        line-height: 10px;
+        padding-left: 5px;
+    }
+    .benefits-block-title {
+        line-height: 40px;
+        letter-spacing: 2px;
+        font-size: 7px;
+        padding-left: 10px;
+    }
+    
+  }
+
 /* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) and (max-width: 1020px)   {
+@media screen and  (min-width: 768px)  {
     .col-sm-4 {
         width: 33.33%;
     }
@@ -1322,40 +1584,20 @@ footer .link-up a {
     .col-sm-12 {
         width: 100%;
     }
-}
-
-
-
-
-@media  screen and (min-width: 1200px) {
-   .col-lg-12 {
-       width: 100%
-   }
-    .col-lg-4 {
-        width: 33.33%;
-    }
-    .col-lg-6 {
-        width: 50%;
-    }
-    .col-lg-3 {
-        width: 25%;
-    }
-}  
-@media  screen and (max-width: 1200px) {
-    .about {
-        padding: 70px 0;
-    }
-    .contents h1 {
-    letter-spacing: 30px;
-    margin-bottom: 50px;
-    }
+    
 }
 @media screen and (max-width: 768px){
     .contents h1 {
-        letter-spacing: 20px;
+        letter-spacing: 14px;
         margin-bottom: 30px;
         font-size: 20px;
         }
+    .arrow-img {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        line-height: 1px;
+    }
     .contents span {
         font-size: 11px;
         padding-top: 50px;
@@ -1390,6 +1632,17 @@ footer .link-up a {
         margin-bottom: 10px;
         flex-direction: column;
     }
+    .benefits {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+    .benefits-block-text {
+        width: 300px;
+        height: 100px;
+        font-size: 10px;
+        line-height: 20px;
+        padding-left: 10px;
+    }
     .header-nav {
         flex-direction: column;
         position: absolute;
@@ -1414,7 +1667,46 @@ footer .link-up a {
     .btn-toggle {
         display: block
     }
-}
+    .baner-content {
+        padding: 70px 0;
+    }
+    .baner-title {
+        margin-bottom: 16px;
+        font-size: 12px;
+        letter-spacing: 5px;
+        line-height: 15px;
+    }
+    .baner-text {
+        margin-bottom: 30px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .baner-btn a {
+        padding: 8px 20px;
+        line-height: 13px;
+        border-radius: 4px;
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+    .baner img {
+        margin-top: -17px;
+    }
+    .news {
+        padding: 70px 0;
+    }
     
-        
-
+}
+@media  screen and (min-width: 1200px) {
+    .col-lg-12 {
+        width: 100%;
+    }
+     .col-lg-4 {
+         width: 33.33%;
+     }
+     .col-lg-6 {
+         width: 50%;
+     }
+     .col-lg-3 {
+         width: 25%;
+     }
+ }  
