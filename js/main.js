@@ -2,6 +2,8 @@ $(function() {
   $( "#tabs" ).tabs({ classes: { "ui-tabs-panel": "row" } });
   $( "#tabs2" ).tabs();
   $('.single-item').slick({
+    dots: true,
+  
     prevArrow: '\
       <div class="prev-arrow">\
         <span><</span>\

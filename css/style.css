@@ -376,6 +376,7 @@ ul {
 .card-wrapp {
    position: relative;
    overflow: hidden;
+   margin-top: 100px;
 }
 .card-wrapp:hover .card-overlay {
     transform: translateY(0)
@@ -397,16 +398,32 @@ ul {
 
 }
 .card-overlay-title {
-    font-size: 20px;
     margin-bottom: 34px;
+    font-size: 15px;
+    letter-spacing: 6px;
+    color: #cfcfcf;
+    font-family: "Dosis",sans-serif;
+    font-weight: 400;
+    
 
 }
 .card-overlay-description {
     font-size: 13px;
     margin-bottom: 44px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #cfcfcf;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+   
 }
 .card-skills label {
     font-size: 11px;
+    letter-spacing: 2px;
+    line-height: 38px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-weight: 400;
     margin-bottom: 7px;
     text-transform: uppercase;
 }
@@ -480,8 +497,6 @@ ul {
 }
 
 .about-text {
-    width: 371px;
-    height: 335px;
     font-size: 15px;
     line-height: 26px;
     color: #777777;
@@ -532,6 +547,7 @@ ul {
 .baner {
     background-color: #111;
     width: 100%;
+    margin: 140px 0 140px 0;
 }
 
 .col-6 {
@@ -586,9 +602,7 @@ ul {
 /* end baner */
 
 /* portfolio */
-.portfolio {
-    padding-top: 140px;
-}
+
 .section-title h2 {
     font-size: 18px;
     letter-spacing: 9px;
@@ -688,7 +702,7 @@ h2 {
 .benefits {
     font-family: "Dosis", sans-serif;
     padding-top: 125px;
-    padding-bottom: 135px;
+   
 }
 .benefits-title {
     text-align: center;
@@ -715,8 +729,7 @@ h2 {
     font-weight: 400;
 }
 .benefits-block-text {
-    width: 371px; 
-    height: 141px; 
+   
     font-size: 14px;
     line-height: 26px;
     color: #777777;
@@ -1339,6 +1352,36 @@ footer .link-up a {
     border-color: #323232;
 }
 /*btn end */
+.single-item .slick-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    justify-content: center;
+}
+.single-item .slick-dots li {
+    display: inline-block;
+}
+.single-item .slick-dots li.slick-active button {
+    border: 1px solid #ccc;
+    background-color: transparent;
+    box-sizing: content-box;
+}
+.single-item .slick-dots li button {
+    width: 7px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    height: 7px;
+    border-radius: 50%;
+    font-size: 0;
+    background-color: #ccc;
+    padding: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+    outline: none;
+    text-align: center;
+}
 .col {
     padding: 0 15px;
 }
@@ -1386,6 +1429,58 @@ footer .link-up a {
   @media screen and (max-width: 480px)  {
     .col-md-12 {
         width: 100%;
+    }
+    .qoute-deskription {
+        font-size: 9px;
+        line-height: 15px;
+    }
+    .qoute-deskription {
+        text-align: center;
+        max-width: 300px;
+        padding-bottom: 75px;
+        padding-top: 100px;
+    }
+    .slider-text {
+        font-size: 9px;
+        opacity: .75;
+        margin-bottom: 10px;
+        line-height: 15px;
+    }
+    .prev-arrow span {
+        left: 12px;
+        top: 54.7%;
+    }
+    .next-arrow span {
+        right: 12px;
+        top: 54.7%;
+    }
+.slider-title {
+    padding-top: 38px;
+    margin-bottom: 20px;
+    font-style: 9px;
+    letter-spacing: 2px;
+} 
+.slider-author {
+    opacity: .75;
+    letter-spacing: 2px;
+    font-size: 6px;
+    line-height: 18px;
+}
+    .baner {
+        margin: 35px 0 35px 0;
+    }
+    blockquote {
+        margin-bottom: 8px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .about-text {
+        font-size: 10px;
+        line-height: 13px;
+        padding: 10px 0 10px 0;
+    }
+    .card-wrapp {
+        margin-top: 25px;
     }
     .arrow-img {
         position: absolute;
@@ -1554,7 +1649,7 @@ footer .link-up a {
     }
     .benefits {
         padding-top: 65px;
-        padding-bottom: 85px;
+       
     }
     .block {
         padding-top: 40px;
@@ -1602,9 +1697,7 @@ footer .link-up a {
         font-size: 11px;
         padding-top: 50px;
     }
-    .portfolio {
-        padding: 70px 0;
-    }
+    
     .about-us-text {
         line-height: 13px;
         padding: 40px 0 40px 0;
@@ -1634,11 +1727,10 @@ footer .link-up a {
     }
     .benefits {
         padding-top: 90px;
-        padding-bottom: 100px;
+       
     }
     .benefits-block-text {
-        width: 300px;
-        height: 100px;
+        
         font-size: 10px;
         line-height: 20px;
         padding-left: 10px;
