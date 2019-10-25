@@ -28,7 +28,8 @@ ul {
     display: inline-block;
 }
 img {
-	max-width: 100%;
+    max-width: 100%;
+    color: red;
 }
 /* end reset */ 
 @font-face {
