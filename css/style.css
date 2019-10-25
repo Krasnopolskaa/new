@@ -208,7 +208,7 @@ h1{
 .icon-sirvice span {
     font-size: 14px;
     letter-spacing: 6px;
-    color: #111111;
+    color: #fff;
     font-family: "Dosis";
     font-weight: 400;
     text-align: center;
@@ -224,7 +224,7 @@ h1{
 
 .row {
     display: flex;
-    margin: 0 -20px;
+    margin: 0 -15px;
     flex-wrap: wrap;
 }
 .col-tab img {
@@ -259,7 +259,7 @@ h1{
     line-height: 26px;
     color: #ffffff;
     font-family: "Dosis";
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
   
 }
